@@ -1,7 +1,7 @@
 node {
     def app
     
-    env.IMAGE = 'easnae817/amazon'
+    env.IMAGE = 'airfluke/amazon'
 
     stage('Clone repository') {
              git branch: 'main', url: 'https://github.com/AirFluke/argocd-amazon-manifest.git'  
@@ -13,8 +13,8 @@ node {
                     withCredentials([usernamePassword(credentialsId: 'karo-github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //script {def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')}
                         //script  {def IMAGE='easnae817/amazon'}
-                        sh "git config user.email easante817@gmail.com"
-                        sh "git config user.name easante817"
+                        sh "git config user.email slayerking665@gmail.com"
+                        sh "git config user.name Airfluke"
                         //sh "git switch master"
                         sh "cat deployment.yml"
                         sh "sed -i 's+${IMAGE}.*+${IMAGE}:${DOCKERTAG}+g' deployment.yml"
