@@ -4,7 +4,7 @@ node {
     env.IMAGE = 'easnae817/amazon'
 
     stage('Clone repository') {
-             git branch: 'main', url: 'https://github.com/easante817/argocd-amazon-manifest.git'  
+             git branch: 'main', url: 'https://github.com/AirFluke/argocd-amazon-manifest.git'  
     }
 
     stage('Update GIT') {
