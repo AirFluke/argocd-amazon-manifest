@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: amazon-container
-        image: airfluke/amazon:latest
+        image: airfluke/amazon:15
         ports:
         - containerPort: 3000
         
